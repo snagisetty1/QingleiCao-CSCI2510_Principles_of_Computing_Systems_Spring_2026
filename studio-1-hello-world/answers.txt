@@ -1,0 +1,55 @@
+CSCI 2510 Studio 1
+Name: Srihan Nagisetty
+Date: 2-19-2026
+
+1) Required #include header file(s)
+Answer: #Include <stdio.h>
+
+2) Signature difference: printf() vs fprintf()
+Answer: printf(const char *format, ...)
+fprintf(FILE *stream, const char *format, ...)
+
+Difference: fprintf has an extra first argument, so you can choose where the output goes.
+
+3) Description difference: printf() vs fprintf()
+Answer:
+printf writes to standard output like stdou).
+fprintf writes to a specified output stream like stdout, stderr, or a file.
+
+4) Terminal output of ./hello_fprintf
+Answer:
+Hello, world!
+
+5) Section number for system calls
+Answer: 2
+
+6) write(): Required #include header file
+Answer:
+#include <unistd.h>
+
+
+7) hello_write.c program
+Answer:
+#include <unistd.h>
+
+int main(int argc, char* argv[]) {
+    (void)argc; (void)argv;
+
+    const char msg[] = "Hello, world!\n";
+    write(STDOUT_FILENO, msg, sizeof(msg) - 1);
+
+    return 0;
+}
+
+8) What happens if write() third arg is 1000/10000?
+Answer:
+It prints "Hello, world!" and is followed by random characters. This happens because write() prints exactly the number of bytes specified, even if it goes past the end of the string in memory.
+
+9) When use C library vs OS system call?
+Answer:
+- C library: When you want better formatting, and easier programming like fprintf or printf.
+- System call: When you need low-level control of the operating system or exact byte-level output like write. 
+
+10) hello.sh output
+Answer: Hello World!
+

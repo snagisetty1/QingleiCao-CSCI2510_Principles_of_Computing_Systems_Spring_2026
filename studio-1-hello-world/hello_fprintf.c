@@ -1,1 +1,9 @@
-//Replace this file with the contents of your hello_fprintf.c
+#include <stdio.h>
+
+int main(int argc, char* argv[]) {
+    (void)argc; (void)argv;
+
+    fprintf(stdout, "Hello, world!\n");
+
+    return 0;
+}
