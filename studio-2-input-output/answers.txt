@@ -1,0 +1,6 @@
+1. Whenever I type in cat, it repeats whatever I say until the EOF. When I type in cat < mars.txt, it prints the file contents and ends.
+2. When I do cat < mars.txt > new.txt and cat new.txt, new.txt becomes a copy of mars.txt and nothing prints during the redirect command.
+3. When I do cat > new.txt and write a couple of lines, the lines replace the old file and print the new lines I wrote. 
+4. >> appends to the end instead of replacing the file contents. 
+5. #include <unistd.h>
+6. Read() return type is ssize. The sepcific return value that indicates the end of a file is 0. 
