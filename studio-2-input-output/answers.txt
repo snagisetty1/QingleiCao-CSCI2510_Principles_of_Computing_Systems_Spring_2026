@@ -4,3 +4,6 @@
 4. >> appends to the end instead of replacing the file contents. 
 5. #include <unistd.h>
 6. Read() return type is ssize. The sepcific return value that indicates the end of a file is 0. 
+7. The behavior does match.
+8. Modifying bufferSize does not affect the correctness of the program if the program writes exactly the number of bytes returned by read(). I tested 1, 5, 50, and 200 for the buffersize and in all cases, the program produced identical output to cat.
+9. The tradeoff between a small bufferSize and a large bufferSize is performance versus system call overhead.
